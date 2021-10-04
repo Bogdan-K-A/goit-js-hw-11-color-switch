@@ -25,7 +25,7 @@ function bgColorChange() {
     colors[randomIntegerFromInterval(0, colors.length - 1)]
 }
 
-function onStart(e) {
+function onStart() {
   if (!isActive) {
     timerId = setInterval(bgColorChange, 1000)
     isActive = true
@@ -33,9 +33,9 @@ function onStart(e) {
   return
 }
 
-function onStop(e) {
+function onStop() {
   clearInterval(timerId)
-  isActive = false
+  isActive
 }
 
 refs.startBtn.addEventListener('click', onStart)
