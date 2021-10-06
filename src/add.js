@@ -35,7 +35,7 @@ function onStart() {
 
 function onStop() {
   clearInterval(timerId)
-  isActive
+  isActive = true
 }
 
 refs.startBtn.addEventListener('click', onStart)
